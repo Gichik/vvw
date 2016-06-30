@@ -1,0 +1,48 @@
+"DOTAAbilities"
+{
+
+	"item_runa_regeneration"
+	{
+		"ID"					"1202"
+		"BaseClass"				"item_lua"
+		"Model"					"models/props_gameplay/rune_regeneration01.vmdl" 		
+		"AbilityTextureName"	"antidote"
+		"ScriptFile"			"lua_items/item_runa_regeneration"
+	}
+
+
+
+	"item_rune_regen"
+   {
+		"ID"							"1201" 
+		"BaseClass"						"item_datadriven"  
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"	
+		"Model"							"models/props_gameplay/rune_regeneration01.vmdl" 
+		"AbilityTextureName"			"item_rune_regen"
+		"AbilityCooldown"				"10.0"		
+		"ItemCost"                       "1" 
+		"ItemAliases"					"item_rune_regen"
+		"ItemDroppable"					"1" 
+		"ItemPurchasable"				"0" 
+		"ItemSellable"					"0" 
+		"ItemKillable"					"0" 
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"  
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH" 
+
+		
+		"OnEquip"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"ai.lua"
+					"Function"				"GiveRegeneration"
+					"item_name"				"item_rune_regen"
+				}
+			
+			}
+		
+   }
+
+
+
+}

@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"TeamCount"  "2"
+	"maps"  "treader"
+	"IsPlayable" "1"
+	"treader"
+ 	{
+  		"MaxPlayers" "6"
+ 	}
+
+}
